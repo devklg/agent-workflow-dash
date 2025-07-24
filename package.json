@@ -1,0 +1,26 @@
+{
+  "name": "agent-workflow-dash",
+  "version": "1.0.0",
+  "description": "Enterprise MERN Agent Workflow Dashboard - Real-time monitoring, communication, and orchestration",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "setup": "npm install && cd server && npm install && cd ../client && npm install",
+    "deploy": "npm run build && npm run start",
+    "test": "cd server && npm test && cd ../client && npm test"
+  },
+  "keywords": ["agent", "workflow", "dashboard", "mern", "real-time", "monitoring", "bmad-v4", "prp", "shadcn"],
+  "author": "Kevin Gardner",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
